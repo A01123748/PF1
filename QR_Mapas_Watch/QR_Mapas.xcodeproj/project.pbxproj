@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		911CA87B1DAB3A8200A9A0C4 /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911CA87A1DAB3A8200A9A0C4 /* NavigationVC.swift */; };
-		91356DF11DAC0BEE00943F10 /* QR_Mapas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 913CF91E1DA99A7500760749 /* QR_Mapas.xcdatamodeld */; };
 		913CF91D1DA99A7500760749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CF91C1DA99A7500760749 /* AppDelegate.swift */; };
 		913CF9201DA99A7500760749 /* QR_Mapas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 913CF91E1DA99A7500760749 /* QR_Mapas.xcdatamodeld */; };
 		913CF9221DA99A7500760749 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CF9211DA99A7500760749 /* MasterViewController.swift */; };
@@ -352,7 +351,6 @@
 				91C9ED8A1DAB419C000F58E6 /* ExtensionDelegate.swift in Sources */,
 				91C9ED881DAB419C000F58E6 /* InterfaceController.swift in Sources */,
 				91C9EDA21DABECDE000F58E6 /* WatchCoreDataProxy.swift in Sources */,
-				91356DF11DAC0BEE00943F10 /* QR_Mapas.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

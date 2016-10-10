@@ -40,8 +40,8 @@ public class WatchCoreDataProxy: NSObject {
         var coordinator: NSPersistentStoreCoordinator?
         var sharedContainerURL: NSURL? = NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier(self.sharedAppGroup)
   
-        if let sharedContainerURL2 = sharedContainerURL {
-            let storeURL = sharedContainerURL2.URLByAppendingPathComponent("SingleViewCoreData.sqlite")
+        if let sharedContainerURL = sharedContainerURL {
+            let storeURL = sharedContainerURL.URLByAppendingPathComponent("SingleViewCoreData.sqlite")
             coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
             do{
                 try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: nil)
