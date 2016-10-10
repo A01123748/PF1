@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+
 class PINDetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var name: UITextField!
@@ -64,6 +65,7 @@ class PINDetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
             customPin.title = name!.text
             customPin.photo = photo
             sourceViewController.annotation = customPin
+            sourceViewController.cAnnos.append(customPin)
             sourceViewController.mapa.addAnnotation(customPin)
             var annotations = sourceViewController.mapa.annotations
             if(annotations.count > 1){

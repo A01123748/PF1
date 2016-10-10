@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		911CA87B1DAB3A8200A9A0C4 /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911CA87A1DAB3A8200A9A0C4 /* NavigationVC.swift */; };
+		91356DF11DAC0BEE00943F10 /* QR_Mapas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 913CF91E1DA99A7500760749 /* QR_Mapas.xcdatamodeld */; };
 		913CF91D1DA99A7500760749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CF91C1DA99A7500760749 /* AppDelegate.swift */; };
 		913CF9201DA99A7500760749 /* QR_Mapas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 913CF91E1DA99A7500760749 /* QR_Mapas.xcdatamodeld */; };
 		913CF9221DA99A7500760749 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CF9211DA99A7500760749 /* MasterViewController.swift */; };
@@ -25,6 +26,8 @@
 		91C9ED8C1DAB419C000F58E6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9ED8B1DAB419C000F58E6 /* NotificationController.swift */; };
 		91C9ED8E1DAB419C000F58E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C9ED8D1DAB419C000F58E6 /* Assets.xcassets */; };
 		91C9ED921DAB419C000F58E6 /* QR_Mapas_Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 91C9ED741DAB419B000F58E6 /* QR_Mapas_Watch.app */; };
+		91C9EDA21DABECDE000F58E6 /* WatchCoreDataProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9EDA11DABECDE000F58E6 /* WatchCoreDataProxy.swift */; };
+		91C9EDA41DABED18000F58E6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9EDA31DABED18000F58E6 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +97,10 @@
 		91C9ED8D1DAB419C000F58E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91C9ED8F1DAB419C000F58E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91C9ED9D1DAB42C9000F58E6 /* QR_Mapas_Watch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QR_Mapas_Watch-Bridging-Header.h"; sourceTree = "<group>"; };
-		91C9ED9F1DAB4303000F58E6 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		91C9EDA01DABE824000F58E6 /* QR_Mapas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QR_Mapas.entitlements; sourceTree = "<group>"; };
+		91C9EDA11DABECDE000F58E6 /* WatchCoreDataProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchCoreDataProxy.swift; sourceTree = "<group>"; };
+		91C9EDA31DABED18000F58E6 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		91C9EDA51DABF241000F58E6 /* WatchCoreDataProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchCoreDataProxy.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,7 @@
 		913CF91B1DA99A7500760749 /* QR_Mapas */ = {
 			isa = PBXGroup;
 			children = (
+				91C9EDA01DABE824000F58E6 /* QR_Mapas.entitlements */,
 				913CF9391DA9C07400760749 /* MapsVC.swift */,
 				913CF91C1DA99A7500760749 /* AppDelegate.swift */,
 				913CF9211DA99A7500760749 /* MasterViewController.swift */,
@@ -157,7 +164,6 @@
 		91C9ED751DAB419B000F58E6 /* QR_Mapas_Watch */ = {
 			isa = PBXGroup;
 			children = (
-				91C9ED9F1DAB4303000F58E6 /* File.swift */,
 				91C9ED761DAB419C000F58E6 /* Interface.storyboard */,
 				91C9ED791DAB419C000F58E6 /* Assets.xcassets */,
 				91C9ED7B1DAB419C000F58E6 /* Info.plist */,
@@ -168,9 +174,12 @@
 		91C9ED841DAB419C000F58E6 /* QR_Mapas_Watch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				91C9EDA31DABED18000F58E6 /* DataManager.swift */,
 				91C9ED871DAB419C000F58E6 /* InterfaceController.swift */,
 				91C9ED891DAB419C000F58E6 /* ExtensionDelegate.swift */,
 				91C9ED8B1DAB419C000F58E6 /* NotificationController.swift */,
+				91C9EDA51DABF241000F58E6 /* WatchCoreDataProxy.h */,
+				91C9EDA11DABECDE000F58E6 /* WatchCoreDataProxy.swift */,
 				91C9ED8D1DAB419C000F58E6 /* Assets.xcassets */,
 				91C9ED8F1DAB419C000F58E6 /* Info.plist */,
 				91C9ED851DAB419C000F58E6 /* Supporting Files */,
@@ -254,6 +263,12 @@
 				TargetAttributes = {
 					913CF9181DA99A7500760749 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = SYEJ6UM9ES;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					91C9ED731DAB419B000F58E6 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -333,8 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				91C9ED8C1DAB419C000F58E6 /* NotificationController.swift in Sources */,
+				91C9EDA41DABED18000F58E6 /* DataManager.swift in Sources */,
 				91C9ED8A1DAB419C000F58E6 /* ExtensionDelegate.swift in Sources */,
 				91C9ED881DAB419C000F58E6 /* InterfaceController.swift in Sources */,
+				91C9EDA21DABECDE000F58E6 /* WatchCoreDataProxy.swift in Sources */,
+				91356DF11DAC0BEE00943F10 /* QR_Mapas.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QR_Mapas/QR_Mapas.entitlements;
 				INFOPLIST_FILE = QR_Mapas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fkts.QR-Mapas";
@@ -481,6 +500,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QR_Mapas/QR_Mapas.entitlements;
 				INFOPLIST_FILE = QR_Mapas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fkts.QR-Mapas";
@@ -583,6 +603,7 @@
 				91C9ED961DAB419C000F58E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91C9ED991DAB419C000F58E6 /* Build configuration list for PBXNativeTarget "QR_Mapas_Watch" */ = {
 			isa = XCConfigurationList;
@@ -591,6 +612,7 @@
 				91C9ED941DAB419C000F58E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

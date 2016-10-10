@@ -9,16 +9,31 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
+
+class Point: NSManagedObject {
+    @NSManaged var image: NSData?
+    @NSManaged var latitude: NSNumber?
+    @NSManaged var longitude: NSNumber?
+    @NSManaged var name: String?
+}
+
+class Route: NSManagedObject {
+    @NSManaged var points: [Point]?
+    @NSManaged var name: String?
+}
 
 class CustomPointAnnotation: MKPointAnnotation {
     var photo = UIImageView()
 }
 
-class MapsVC: UIViewController, CLLocationManagerDelegate, UIPopoverPresentationControllerDelegate, MKMapViewDelegate{
+class MapsVC: UIViewController, CLLocationManagerDelegate, UIPopoverPresentationControllerDelegate, MKMapViewDelegate, NSFetchedResultsControllerDelegate{
     
     @IBOutlet weak var mapa: MKMapView!
     private let manejador = CLLocationManager()
     var annotation = CustomPointAnnotation()
+    var managedObjectContext: NSManagedObjectContext? = nil
+    var cAnnos = [CustomPointAnnotation]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,5 +161,124 @@ class MapsVC: UIViewController, CLLocationManagerDelegate, UIPopoverPresentation
         renderer.lineWidth = 3.0
         return renderer
     }
+    @IBAction func saveRoute(sender: AnyObject) {
+        let pins = self.cAnnos
+        let context = self.fetchedResultsController.managedObjectContext
+        let entity = self.fetchedResultsController.fetchRequest.entity!
+        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context)
+             
+             // If appropriate, configure the new managed object.
+             // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+        var points = [Point]()
+        let point = Point()
+            for ann in pins{
+                point.latitude = ann.coordinate.latitude
+                point.longitude = ann.coordinate.longitude
+                point.name = ann.title!
+                point.image = UIImagePNGRepresentation(ann.photo.image!)
+                points.append(point)
+            }
+        let route = Route()
+        route.name = "Nombre de la ruta"
+        route.points = points
+        newManagedObject.setValue(route, forKey: "route")
+        
+             // Save the context.
+             do {
+             try context.save()
+             } catch {
+             // Replace this implementation with code to handle the error appropriately.
+             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+             //print("Unresolved error \(error), \(error.userInfo)")
+             abort()
+             }
+        
+        
+        
+        
+
+    }
+    
+    // MARK: - Fetched results controller
+    
+    var fetchedResultsController: NSFetchedResultsController {
+        if _fetchedResultsController != nil {
+            return _fetchedResultsController!
+        }
+        
+        let fetchRequest = NSFetchRequest()
+        // Edit the entity name as appropriate.
+        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: self.managedObjectContext!)
+        fetchRequest.entity = entity
+        
+        // Set the batch size to a suitable number.
+        fetchRequest.fetchBatchSize = 20
+        
+        // Edit the sort key as appropriate.
+        let sortDescriptor = NSSortDescriptor(key: "timeStamp", ascending: false)
+        
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        // Edit the section name key path and cache name if appropriate.
+        // nil for section name key path means "no sections".
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: "Master")
+        aFetchedResultsController.delegate = self
+        _fetchedResultsController = aFetchedResultsController
+        
+        do {
+            try _fetchedResultsController!.performFetch()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            //print("Unresolved error \(error), \(error.userInfo)")
+            abort()
+        }
+        
+        return _fetchedResultsController!
+    }
+    var _fetchedResultsController: NSFetchedResultsController? = nil
+    
+    func controllerWillChangeContent(controller: NSFetchedResultsController) {
+        //self.tableView.beginUpdates()
+    }
+    
+    func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
+        switch type {
+        case .Insert: break
+            //self.tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
+        case .Delete: break
+            //self.tableView.deleteSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
+        default:
+            return
+        }
+    }
+    
+    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+        switch type {
+        case .Insert: break
+            //tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
+        case .Delete: break
+            //tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
+        case .Update: break
+            //self.configureCell(tableView.cellForRowAtIndexPath(indexPath!)!, withObject: anObject as! NSManagedObject)
+        case .Move: break
+            //tableView.moveRowAtIndexPath(indexPath!, toIndexPath: newIndexPath!)
+        }
+    }
+    
+    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+        //self.tableView.endUpdates()
+    }
+    
+    
+    // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed.
+    
+    /*func controllerDidChangeContent(controller: NSFetchedResultsController) {
+        // In the simplest, most efficient, case, reload the table view.
+        //self.tableView.reloadData()
+    }*/
+    
+    
+
 }
 

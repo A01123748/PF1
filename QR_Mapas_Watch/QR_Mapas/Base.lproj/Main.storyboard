@@ -34,15 +34,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aag-6z-YGj">
-                                <rect key="frame" x="107" y="302" width="38" height="30"/>
-                                <state key="normal" title="Maps"/>
+                                <rect key="frame" x="81" y="302" width="91" height="30"/>
+                                <state key="normal" title="Generar Ruta"/>
                                 <connections>
                                     <segue destination="eF9-36-Vwd" kind="show" id="aiH-Td-jON"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEg-P1-VAj">
-                                <rect key="frame" x="454" y="302" width="30" height="30"/>
-                                <state key="normal" title="QR"/>
+                                <rect key="frame" x="442" y="302" width="55" height="30"/>
+                                <state key="normal" title="Leer QR"/>
                                 <connections>
                                     <segue destination="vC3-pB-5Vb" kind="show" id="BQM-QN-f9H"/>
                                 </connections>
@@ -50,8 +50,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="GEg-P1-VAj" secondAttribute="trailing" constant="116" id="3Ew-DM-04S"/>
-                            <constraint firstItem="aag-6z-YGj" firstAttribute="leading" secondItem="SbT-Yz-mlZ" secondAttribute="leading" constant="107" id="6pw-xE-ESu"/>
+                            <constraint firstAttribute="trailing" secondItem="GEg-P1-VAj" secondAttribute="trailing" constant="103" id="3Ew-DM-04S"/>
+                            <constraint firstItem="aag-6z-YGj" firstAttribute="leading" secondItem="SbT-Yz-mlZ" secondAttribute="leading" constant="81" id="6pw-xE-ESu"/>
                             <constraint firstItem="aag-6z-YGj" firstAttribute="top" secondItem="5eN-3s-PsN" secondAttribute="bottom" constant="238" id="SQV-Zg-8uG"/>
                             <constraint firstItem="aag-6z-YGj" firstAttribute="baseline" secondItem="GEg-P1-VAj" secondAttribute="baseline" id="hRv-1t-oHJ"/>
                         </constraints>
@@ -147,11 +147,14 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Save Route"/>
                                         </button>
+                                        <connections>
+                                            <action selector="saveRoute:" destination="ZKN-M1-Z3G" id="Hcr-YE-CX5"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To insert a new point long press for 1 sec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUY-Ke-Xau">
-                                <rect key="frame" x="188" y="567" width="312" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To insert long press for 1 sec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUY-Ke-Xau">
+                                <rect key="frame" x="190" y="567" width="220" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -161,7 +164,7 @@
                         <constraints>
                             <constraint firstItem="Vah-AJ-Rp9" firstAttribute="top" secondItem="12r-Fl-D8z" secondAttribute="bottom" id="8wO-aV-XuV"/>
                             <constraint firstItem="Vah-AJ-Rp9" firstAttribute="bottom" secondItem="TxM-KS-ytQ" secondAttribute="top" constant="-44" id="DuN-7j-29o"/>
-                            <constraint firstItem="bUY-Ke-Xau" firstAttribute="leading" secondItem="Cjm-dG-dkI" secondAttribute="leading" constant="188" id="GvD-Ur-Mq7"/>
+                            <constraint firstItem="bUY-Ke-Xau" firstAttribute="leading" secondItem="Cjm-dG-dkI" secondAttribute="leading" constant="190" id="GvD-Ur-Mq7"/>
                             <constraint firstItem="bUY-Ke-Xau" firstAttribute="centerY" secondItem="OE4-Hl-Hfk" secondAttribute="centerY" id="KDW-Ce-eHo"/>
                             <constraint firstItem="Vah-AJ-Rp9" firstAttribute="leading" secondItem="Cjm-dG-dkI" secondAttribute="leading" id="OK1-fb-t3X"/>
                             <constraint firstItem="OE4-Hl-Hfk" firstAttribute="trailing" secondItem="Vah-AJ-Rp9" secondAttribute="trailing" id="dfw-wH-ZzX"/>
@@ -369,7 +372,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="aiH-Td-jON"/>
         <segue reference="AN9-QI-8hi"/>
-        <segue reference="Q5Z-Ce-2LB"/>
     </inferredMetricsTieBreakers>
 </document>

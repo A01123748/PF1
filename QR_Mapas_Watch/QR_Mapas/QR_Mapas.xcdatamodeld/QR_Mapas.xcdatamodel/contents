@@ -7,14 +7,15 @@
         <attribute name="name" optional="YES" attributeType="String">
             <userInfo/>
         </attribute>
+        <relationship name="route" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Route" inverseName="points" inverseEntity="Route" syncable="YES"/>
         <userInfo/>
     </entity>
     <entity name="Route" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="points" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Points" syncable="YES"/>
+        <relationship name="points" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Points" inverseName="route" inverseEntity="Points" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Points" positionX="261" positionY="189" width="128" height="105"/>
-        <element name="Route" positionX="261" positionY="198" width="128" height="75"/>
+        <element name="Points" positionX="261" positionY="189" width="128" height="118"/>
+        <element name="Route" positionX="637" positionY="189" width="128" height="73"/>
     </elements>
 </model>
