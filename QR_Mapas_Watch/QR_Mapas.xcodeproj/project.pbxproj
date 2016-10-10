@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		911CA87B1DAB3A8200A9A0C4 /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911CA87A1DAB3A8200A9A0C4 /* NavigationVC.swift */; };
+		913CF91D1DA99A7500760749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CF91C1DA99A7500760749 /* AppDelegate.swift */; };
+		913CF9201DA99A7500760749 /* QR_Mapas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 913CF91E1DA99A7500760749 /* QR_Mapas.xcdatamodeld */; };
+		913CF9221DA99A7500760749 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CF9211DA99A7500760749 /* MasterViewController.swift */; };
+		913CF9241DA99A7600760749 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CF9231DA99A7600760749 /* DetailViewController.swift */; };
+		913CF9271DA99A7600760749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913CF9251DA99A7600760749 /* Main.storyboard */; };
+		913CF9291DA99A7600760749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 913CF9281DA99A7600760749 /* Assets.xcassets */; };
+		913CF92C1DA99A7600760749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913CF92A1DA99A7600760749 /* LaunchScreen.storyboard */; };
+		913CF93A1DA9C07400760749 /* MapsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CF9391DA9C07400760749 /* MapsVC.swift */; };
+		913CF93C1DAAFB4400760749 /* PINDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CF93B1DAAFB4400760749 /* PINDetailsVC.swift */; };
+		91C9ED781DAB419C000F58E6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C9ED761DAB419C000F58E6 /* Interface.storyboard */; };
+		91C9ED7A1DAB419C000F58E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C9ED791DAB419C000F58E6 /* Assets.xcassets */; };
+		91C9ED811DAB419C000F58E6 /* QR_Mapas_Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 91C9ED801DAB419C000F58E6 /* QR_Mapas_Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		91C9ED881DAB419C000F58E6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9ED871DAB419C000F58E6 /* InterfaceController.swift */; };
+		91C9ED8A1DAB419C000F58E6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9ED891DAB419C000F58E6 /* ExtensionDelegate.swift */; };
+		91C9ED8C1DAB419C000F58E6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9ED8B1DAB419C000F58E6 /* NotificationController.swift */; };
+		91C9ED8E1DAB419C000F58E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C9ED8D1DAB419C000F58E6 /* Assets.xcassets */; };
+		91C9ED921DAB419C000F58E6 /* QR_Mapas_Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 91C9ED741DAB419B000F58E6 /* QR_Mapas_Watch.app */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		91C9ED821DAB419C000F58E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 913CF9111DA99A7500760749 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91C9ED7F1DAB419C000F58E6;
+			remoteInfo = "QR_Mapas_Watch Extension";
+		};
+		91C9ED901DAB419C000F58E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 913CF9111DA99A7500760749 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91C9ED731DAB419B000F58E6;
+			remoteInfo = QR_Mapas_Watch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		91C9ED981DAB419C000F58E6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				91C9ED811DAB419C000F58E6 /* QR_Mapas_Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C9ED9A1DAB419C000F58E6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				91C9ED921DAB419C000F58E6 /* QR_Mapas_Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		911CA87A1DAB3A8200A9A0C4 /* NavigationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
+		913CF9191DA99A7500760749 /* QR_Mapas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QR_Mapas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		913CF91C1DA99A7500760749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		913CF91F1DA99A7500760749 /* QR_Mapas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QR_Mapas.xcdatamodel; sourceTree = "<group>"; };
+		913CF9211DA99A7500760749 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		913CF9231DA99A7600760749 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		913CF9261DA99A7600760749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		913CF9281DA99A7600760749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		913CF92B1DA99A7600760749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		913CF92D1DA99A7600760749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		913CF9391DA9C07400760749 /* MapsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsVC.swift; sourceTree = "<group>"; };
+		913CF93B1DAAFB4400760749 /* PINDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PINDetailsVC.swift; sourceTree = "<group>"; };
+		91C9ED741DAB419B000F58E6 /* QR_Mapas_Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QR_Mapas_Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C9ED771DAB419C000F58E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		91C9ED791DAB419C000F58E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91C9ED7B1DAB419C000F58E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C9ED801DAB419C000F58E6 /* QR_Mapas_Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "QR_Mapas_Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C9ED861DAB419C000F58E6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		91C9ED871DAB419C000F58E6 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		91C9ED891DAB419C000F58E6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		91C9ED8B1DAB419C000F58E6 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		91C9ED8D1DAB419C000F58E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91C9ED8F1DAB419C000F58E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C9ED9D1DAB42C9000F58E6 /* QR_Mapas_Watch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QR_Mapas_Watch-Bridging-Header.h"; sourceTree = "<group>"; };
+		91C9ED9F1DAB4303000F58E6 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		913CF9161DA99A7500760749 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C9ED7D1DAB419C000F58E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		913CF9101DA99A7500760749 = {
+			isa = PBXGroup;
+			children = (
+				913CF91B1DA99A7500760749 /* QR_Mapas */,
+				91C9ED751DAB419B000F58E6 /* QR_Mapas_Watch */,
+				91C9ED841DAB419C000F58E6 /* QR_Mapas_Watch Extension */,
+				913CF91A1DA99A7500760749 /* Products */,
+				91C9ED9D1DAB42C9000F58E6 /* QR_Mapas_Watch-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		913CF91A1DA99A7500760749 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				913CF9191DA99A7500760749 /* QR_Mapas.app */,
+				91C9ED741DAB419B000F58E6 /* QR_Mapas_Watch.app */,
+				91C9ED801DAB419C000F58E6 /* QR_Mapas_Watch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		913CF91B1DA99A7500760749 /* QR_Mapas */ = {
+			isa = PBXGroup;
+			children = (
+				913CF9391DA9C07400760749 /* MapsVC.swift */,
+				913CF91C1DA99A7500760749 /* AppDelegate.swift */,
+				913CF9211DA99A7500760749 /* MasterViewController.swift */,
+				913CF9231DA99A7600760749 /* DetailViewController.swift */,
+				911CA87A1DAB3A8200A9A0C4 /* NavigationVC.swift */,
+				913CF9251DA99A7600760749 /* Main.storyboard */,
+				913CF93B1DAAFB4400760749 /* PINDetailsVC.swift */,
+				913CF9281DA99A7600760749 /* Assets.xcassets */,
+				913CF92A1DA99A7600760749 /* LaunchScreen.storyboard */,
+				913CF92D1DA99A7600760749 /* Info.plist */,
+				913CF91E1DA99A7500760749 /* QR_Mapas.xcdatamodeld */,
+			);
+			path = QR_Mapas;
+			sourceTree = "<group>";
+		};
+		91C9ED751DAB419B000F58E6 /* QR_Mapas_Watch */ = {
+			isa = PBXGroup;
+			children = (
+				91C9ED9F1DAB4303000F58E6 /* File.swift */,
+				91C9ED761DAB419C000F58E6 /* Interface.storyboard */,
+				91C9ED791DAB419C000F58E6 /* Assets.xcassets */,
+				91C9ED7B1DAB419C000F58E6 /* Info.plist */,
+			);
+			path = QR_Mapas_Watch;
+			sourceTree = "<group>";
+		};
+		91C9ED841DAB419C000F58E6 /* QR_Mapas_Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				91C9ED871DAB419C000F58E6 /* InterfaceController.swift */,
+				91C9ED891DAB419C000F58E6 /* ExtensionDelegate.swift */,
+				91C9ED8B1DAB419C000F58E6 /* NotificationController.swift */,
+				91C9ED8D1DAB419C000F58E6 /* Assets.xcassets */,
+				91C9ED8F1DAB419C000F58E6 /* Info.plist */,
+				91C9ED851DAB419C000F58E6 /* Supporting Files */,
+			);
+			path = "QR_Mapas_Watch Extension";
+			sourceTree = "<group>";
+		};
+		91C9ED851DAB419C000F58E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				91C9ED861DAB419C000F58E6 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		913CF9181DA99A7500760749 /* QR_Mapas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 913CF9301DA99A7600760749 /* Build configuration list for PBXNativeTarget "QR_Mapas" */;
+			buildPhases = (
+				913CF9151DA99A7500760749 /* Sources */,
+				913CF9161DA99A7500760749 /* Frameworks */,
+				913CF9171DA99A7500760749 /* Resources */,
+				91C9ED9A1DAB419C000F58E6 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91C9ED911DAB419C000F58E6 /* PBXTargetDependency */,
+			);
+			name = QR_Mapas;
+			productName = QR_Mapas;
+			productReference = 913CF9191DA99A7500760749 /* QR_Mapas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		91C9ED731DAB419B000F58E6 /* QR_Mapas_Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91C9ED991DAB419C000F58E6 /* Build configuration list for PBXNativeTarget "QR_Mapas_Watch" */;
+			buildPhases = (
+				91C9ED721DAB419B000F58E6 /* Resources */,
+				91C9ED981DAB419C000F58E6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91C9ED831DAB419C000F58E6 /* PBXTargetDependency */,
+			);
+			name = QR_Mapas_Watch;
+			productName = QR_Mapas_Watch;
+			productReference = 91C9ED741DAB419B000F58E6 /* QR_Mapas_Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		91C9ED7F1DAB419C000F58E6 /* QR_Mapas_Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91C9ED971DAB419C000F58E6 /* Build configuration list for PBXNativeTarget "QR_Mapas_Watch Extension" */;
+			buildPhases = (
+				91C9ED7C1DAB419C000F58E6 /* Sources */,
+				91C9ED7D1DAB419C000F58E6 /* Frameworks */,
+				91C9ED7E1DAB419C000F58E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "QR_Mapas_Watch Extension";
+			productName = "QR_Mapas_Watch Extension";
+			productReference = 91C9ED801DAB419C000F58E6 /* QR_Mapas_Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		913CF9111DA99A7500760749 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Eliseo Fuentes";
+				TargetAttributes = {
+					913CF9181DA99A7500760749 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					91C9ED731DAB419B000F58E6 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					91C9ED7F1DAB419C000F58E6 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 913CF9141DA99A7500760749 /* Build configuration list for PBXProject "QR_Mapas" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 913CF9101DA99A7500760749;
+			productRefGroup = 913CF91A1DA99A7500760749 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				913CF9181DA99A7500760749 /* QR_Mapas */,
+				91C9ED731DAB419B000F58E6 /* QR_Mapas_Watch */,
+				91C9ED7F1DAB419C000F58E6 /* QR_Mapas_Watch Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		913CF9171DA99A7500760749 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				913CF92C1DA99A7600760749 /* LaunchScreen.storyboard in Resources */,
+				913CF9291DA99A7600760749 /* Assets.xcassets in Resources */,
+				913CF9271DA99A7600760749 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C9ED721DAB419B000F58E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C9ED7A1DAB419C000F58E6 /* Assets.xcassets in Resources */,
+				91C9ED781DAB419C000F58E6 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C9ED7E1DAB419C000F58E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C9ED8E1DAB419C000F58E6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		913CF9151DA99A7500760749 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				911CA87B1DAB3A8200A9A0C4 /* NavigationVC.swift in Sources */,
+				913CF91D1DA99A7500760749 /* AppDelegate.swift in Sources */,
+				913CF9201DA99A7500760749 /* QR_Mapas.xcdatamodeld in Sources */,
+				913CF9221DA99A7500760749 /* MasterViewController.swift in Sources */,
+				913CF93C1DAAFB4400760749 /* PINDetailsVC.swift in Sources */,
+				913CF9241DA99A7600760749 /* DetailViewController.swift in Sources */,
+				913CF93A1DA9C07400760749 /* MapsVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C9ED7C1DAB419C000F58E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C9ED8C1DAB419C000F58E6 /* NotificationController.swift in Sources */,
+				91C9ED8A1DAB419C000F58E6 /* ExtensionDelegate.swift in Sources */,
+				91C9ED881DAB419C000F58E6 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		91C9ED831DAB419C000F58E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91C9ED7F1DAB419C000F58E6 /* QR_Mapas_Watch Extension */;
+			targetProxy = 91C9ED821DAB419C000F58E6 /* PBXContainerItemProxy */;
+		};
+		91C9ED911DAB419C000F58E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91C9ED731DAB419B000F58E6 /* QR_Mapas_Watch */;
+			targetProxy = 91C9ED901DAB419C000F58E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		913CF9251DA99A7600760749 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				913CF9261DA99A7600760749 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		913CF92A1DA99A7600760749 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				913CF92B1DA99A7600760749 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		91C9ED761DAB419C000F58E6 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91C9ED771DAB419C000F58E6 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		913CF92E1DA99A7600760749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		913CF92F1DA99A7600760749 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		913CF9311DA99A7600760749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = QR_Mapas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fkts.QR-Mapas";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		913CF9321DA99A7600760749 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = QR_Mapas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fkts.QR-Mapas";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		91C9ED931DAB419C000F58E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = QR_Mapas_Watch_Extension;
+				INFOPLIST_FILE = QR_Mapas_Watch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fkts.QR-Mapas.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "QR_Mapas_Watch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		91C9ED941DAB419C000F58E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = QR_Mapas_Watch_Extension;
+				INFOPLIST_FILE = QR_Mapas_Watch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fkts.QR-Mapas.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "QR_Mapas_Watch-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		91C9ED951DAB419C000F58E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "QR_Mapas_Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fkts.QR-Mapas.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		91C9ED961DAB419C000F58E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "QR_Mapas_Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fkts.QR-Mapas.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		913CF9141DA99A7500760749 /* Build configuration list for PBXProject "QR_Mapas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				913CF92E1DA99A7600760749 /* Debug */,
+				913CF92F1DA99A7600760749 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		913CF9301DA99A7600760749 /* Build configuration list for PBXNativeTarget "QR_Mapas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				913CF9311DA99A7600760749 /* Debug */,
+				913CF9321DA99A7600760749 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91C9ED971DAB419C000F58E6 /* Build configuration list for PBXNativeTarget "QR_Mapas_Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C9ED951DAB419C000F58E6 /* Debug */,
+				91C9ED961DAB419C000F58E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		91C9ED991DAB419C000F58E6 /* Build configuration list for PBXNativeTarget "QR_Mapas_Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C9ED931DAB419C000F58E6 /* Debug */,
+				91C9ED941DAB419C000F58E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		913CF91E1DA99A7500760749 /* QR_Mapas.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				913CF91F1DA99A7500760749 /* QR_Mapas.xcdatamodel */,
+			);
+			currentVersion = 913CF91F1DA99A7500760749 /* QR_Mapas.xcdatamodel */;
+			path = QR_Mapas.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 913CF9111DA99A7500760749 /* Project object */;
+}
